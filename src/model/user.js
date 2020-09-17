@@ -75,7 +75,7 @@ userSchema.methods.toJSON =  function(){
 userSchema.methods.generateAuthToken = async function (){
     const user = this
     console.log(user)
-    const token = jwt.sign({ _id: user.id}, "thisismypocket")
+    const token = jwt.sign({ _id: user.id}, process.env.JWT_SECRET)
     console.log(token)
     user.tokens = user.tokens.concat({token})
     await user.save();
