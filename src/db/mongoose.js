@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
  mongoose.connect(process.env.MONGODB_URL, { useNewUrlParser: true , useCreateIndex : true })
 
+
+
+ 
 //  const User = mongoose.model('User', { 
 //      name: {
 //         type : String,
